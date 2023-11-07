@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Math Calculator</title>
+<style>
+	body, html {
+		height: 100%;
+		margin: 0;
+		font-family: Arial, sans-serif;
+	}
+	.container {
+		padding: 20px;
+		text-align: center;
+	}
+	input[type="number"] {
+		padding: 10px;
+		margin: 10px;
+		width: 150px;
+	}
+	button {
+		padding: 10px 20px;
+		cursor: pointer;
+	}
+	#result {
+		margin-top: 20px;
+	}
+</style>
+</head>
+<body>
+
+<div class="container">
+	<input type="number" id="num1" placeholder="Number 1">
+	<input type="number" id="num2" placeholder="Number 2">
+	<div>
+		<button onclick="calculate('+')">Add</button>
+		<button onclick="calculate('-')">Subtract</button>
+		<button onclick="calculate('*')">Multiply</button>
+		<button onclick="calculate('/')">Divide</button>
+	</div>
+	<div id="result"></div>
+</div>
+
+<script>
+	const calculate = (operation) => {
+	const num1 = parseFloat(document.getElementById('num1').value);
+	const num2 = parseFloat(document.getElementById('num2').value);
+	let result;
+	switch (operation) {
+		case '+': result = num1 + num2; break;
+		case '-': result = num1 - num2; break;
+		case '*': result = num1 * num2; break;
+		case '/': result = num2 !== 0 ? num1 / num2 : 'Error: Divide by 0'; break;
+		default: result = 'Invalid operation';
+	}
+	document.getElementById('result').innerText = `Result: ${result}`;
+	};
+</script>
+
+</body>
+</html>

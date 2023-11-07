@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Methods Exercise 1: Combining Arrays</title>
+</head>
+<body>
+
+<h2>Combine and Sort Two Arrays</h2>
+<button onclick="combineAndDisplay()">Combine and Sort</button>
+<p id="combinedResult"></p>
+
+<script>
+function combineAndDisplay() {
+	const array1 = [3, 6, 11];
+	const array2 = [2, 4, 10];
+	document.getElementById('combinedResult').innerText = 'Combined Array: ' + combineAndSort(array1, array2);
+}
+
+function combineAndSort(arr1, arr2) {
+	return arr1.concat(arr2).sort((a, b) => a - b);
+}
+</script>
+
+</body>
+</html>

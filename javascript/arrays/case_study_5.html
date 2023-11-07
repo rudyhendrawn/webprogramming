@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Books Sorter</title>
+</head>
+<body>
+
+<h2>Books Sorter</h2>
+<p>Program that sorts an array of book objects by their title property.</p>
+<button onclick="sortBooks()">Sort Books</button>
+<p id="sortedBooksResult"></p>
+
+<script>
+function sortBooks() {
+	const books = [
+		{title: "The Great Gatsby", author: "F. Scott Fitzgerald"},
+		{title: "1984", author: "George Orwell"},
+		{title: "Brave New World", author: "Aldous Huxley"}
+	];
+	books.sort((a, b) => a.title.localeCompare(b.title));
+	const sortedTitles = books.map(book => book.title);
+	document.getElementById('sortedBooksResult').innerText = 'Sorted Books: ' + sortedTitles.join(', ');
+}
+</script>
+
+</body>
+</html>

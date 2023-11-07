@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Exercise 3: Check for Presence</title>
+</head>
+<body>
+
+<h2>Check for Presence of an Element in an Array</h2>
+<input type="text" id="elementToCheck" placeholder="Enter element to check">
+<button onclick="checkElement()">Check Presence</button>
+<p id="presenceResult"></p>
+
+<script>
+function checkElement() {
+	const fruits = ['apple', 'banana', 'mango', 'orange'];
+	const element = document.getElementById('elementToCheck').value;
+	const isPresent = checkPresence(fruits, element);
+	document.getElementById('presenceResult').innerText = 'Is Present: ' + isPresent;
+}
+
+function checkPresence(arr, element) {
+	return arr.includes(element);
+}
+</script>
+
+</body>
+</html>

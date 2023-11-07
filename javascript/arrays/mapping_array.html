@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Methods Exercise 3: Mapping Array</title>
+</head>
+<body>
+
+<h2>Map Array to Double Each Number</h2>
+<button onclick="mapAndDisplay()">Map and Double</button>
+<p id="mapResult"></p>
+
+<script>
+function mapAndDisplay() {
+	const myNumbers = [1, 2, 3, 4, 5];
+	document.getElementById('mapResult').innerText = 'Mapped Array: ' + mapDouble(myNumbers);
+}
+
+function mapDouble(numbers) {
+	return numbers.map(number => number * 2);
+}
+</script>
+
+</body>
+</html>

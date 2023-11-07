@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart Total</title>
+</head>
+<body>
+
+<h2>Shopping Cart Total</h2>
+<form id="cartForm">
+	<label for="prices">Enter item prices (comma-separated):</label>
+	<input type="text" id="prices" placeholder="e.g., 9.99, 5.99, 0.99">
+	<button type="button" onclick="calculateTotal()">Calculate Total</button>
+</form>
+<p id="totalResult"></p>
+
+<script>
+function calculateTotal() {
+	const pricesInput = document.getElementById('prices').value;
+	const prices = pricesInput.split(',').map(Number);
+	const total = prices.reduce((acc, price) => acc + price, 0);
+	document.getElementById('totalResult').innerText = 'Total: $' + total.toFixed(2);
+}
+</script>
+
+</body>
+</html>

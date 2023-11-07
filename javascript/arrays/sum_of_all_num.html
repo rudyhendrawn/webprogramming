@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Exercise 1: Sum of All Numbers</title>
+</head>
+<body>
+
+<h2>Sum of All Numbers in an Array</h2>
+<button onclick="showSum()">Calculate Sum</button>
+<p id="sumResult"></p>
+
+<script>
+function showSum() {
+  const myNumbers = [1, 2, 3, 4, 5];
+  document.getElementById('sumResult').innerText = 'Sum: ' + sumArray(myNumbers);
+}
+
+function sumArray(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+  }
+  return sum;
+}
+</script>
+
+</body>
+</html>

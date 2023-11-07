@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grade Average Calculator</title>
+</head>
+<body>
+
+<h2>Grade Average Calculator</h2>
+<form id="gradesForm">
+	<label for="grades">Enter grades (comma-separated):</label>
+	<input type="text" id="grades" placeholder="e.g., 88, 94, 72">
+	<button type="button" onclick="calculateAverage()">Calculate Average</button>
+</form>
+<p id="averageResult"></p>
+
+<script>
+function calculateAverage() {
+	const gradesInput = document.getElementById('grades').value;
+	const grades = gradesInput.split(',').map(Number);
+	const sum = grades.reduce((acc, grade) => acc + grade, 0);
+	const average = sum / grades.length;
+	document.getElementById('averageResult').innerText = 'Average Grade: ' + average.toFixed(2);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invalid Entries Filter</title>
+</head>
+<body>
+
+<h2>Invalid Entries Filter</h2>
+<p>Program that filters out invalid or null entries from an array of data.</p>
+<button onclick="filterInvalidEntries()">Filter Invalid</button>
+<p id="validEntriesResult"></p>
+
+<script>
+function filterInvalidEntries() {
+	const entries = ["John", null, "Anna", undefined, "", "Mike"];
+	const validEntries = entries.filter(entry => entry);
+	document.getElementById('validEntriesResult').innerText = 'Valid Entries: ' + validEntries.join(', ');
+}
+</script>
+
+</body>
+</html>

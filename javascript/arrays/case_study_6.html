@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Data Mapper</title>
+</head>
+<body>
+
+<h2>User Data Mapper</h2>
+<p>program that maps an array of user objects to an array of strings formatted as "Name: [name], Age: [age]".</p>
+<button onclick="mapUserData()">Map User Data</button>
+<p id="mappedUsersResult"></p>
+
+<script>
+function mapUserData() {
+	const users = [
+		{name: "John Doe", age: 28},
+		{name: "Anna Smith", age: 34},
+		{name: "Mike Johnson", age: 45}
+	];
+	const userInfo = users.map(user => `Name: ${user.name}, Age: ${user.age}`);
+	document.getElementById('mappedUsersResult').innerText = 'Mapped Users: ' + userInfo.join('; ');
+}
+</script>
+
+</body>
+</html>

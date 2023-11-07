@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List Filter</title>
+<style>
+	body, html {
+		height: 100%;
+		margin: 0;
+		font-family: Arial, sans-serif;
+	}
+	.container {
+		padding: 20px;
+	}
+	#filterInput {
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	li {
+		padding: 5px;
+		margin-bottom: 5px;
+		background: #f2f2f2;
+	}
+</style>
+</head>
+<body>
+
+<div class="container">
+	<input type="text" id="filterInput" placeholder="Filter list...">
+	<ul id="myList">
+		<li>Apple</li>
+		<li>Banana</li>
+		<li>Cherry</li>
+		<li>Date</li>
+		<li>Elderberry</li>
+	</ul>
+</div>
+
+<script>
+	document.getElementById('filterInput').onkeyup = () => {
+	const filterText = document.getElementById('filterInput').value.toLowerCase();
+	const listItems = document.getElementById('myList').getElementsByTagName('li');
+	Array.from(listItems).forEach((item) => {
+		const text = item.textContent.toLowerCase();
+		item.style.display = text.includes(filterText) ? '' : 'none';
+	});
+	};
+</script>
+
+</body>
+</html>

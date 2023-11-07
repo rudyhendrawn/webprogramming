@@ -1,0 +1,31 @@
+.calculator {
+	font-family: Arial, sans-serif;
+	background-color: #f7f7f7;
+	padding: 20px;
+	width: 300px;
+	margin: auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.buttons button {
+	width: calc(50% - 4px);
+	padding: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+#result {
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin-top: 10px;
+}

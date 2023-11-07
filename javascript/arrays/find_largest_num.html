@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Exercise 2: Find the Largest Number</title>
+</head>
+<body>
+
+<h2>Find the Largest Number in an Array</h2>
+<button onclick="showLargest()">Find Largest</button>
+<p id="largestResult"></p>
+
+<script>
+function showLargest() {
+	const myNumbers = [10, 36, 54, 89, 12];
+	document.getElementById('largestResult').innerText = 'Largest Number: ' + findLargest(myNumbers);
+}
+
+function findLargest(numbers) {
+	let largest = numbers[0];
+	for (let i = 1; i < numbers.length; i++) {
+		if (numbers[i] > largest) {
+			largest = numbers[i];
+		}
+	}
+	return largest;
+}
+</script>
+
+</body>
+</html>
