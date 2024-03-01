@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST', '<your_hostname>');
-define('DB_NAME', '<your_database_name>');
-define('DB_USER', '<your_username>');
-define('DB_PASS', '<your_password>');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'webpro');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
 try 
 {
