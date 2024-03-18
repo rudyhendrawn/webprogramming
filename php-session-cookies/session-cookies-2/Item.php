@@ -1,23 +1,19 @@
 <?php
 require_once 'dbconfig.php';
 
-class Item 
-{
+class Item {
     private $pdo;
 
-    public function __construct($pdo) 
-	{
+    public function __construct($pdo) {
         $this->pdo = $pdo;
     }
 
-    public function getAllItems() 
-	{
+    public function getAllItems() {
         $stmt = $this->pdo->query("SELECT * FROM items");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function addItem($name) 
-	{
+    public function addItem($name) {
         $stmt = $this->pdo->prepare("INSERT INTO items (name) VALUES (:name)");
         $stmt->execute(['name' => $name]);
     }

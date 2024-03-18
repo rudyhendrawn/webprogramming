@@ -33,15 +33,12 @@ $arrraymulti2 = array
 	"lastname" => "Ari"
 );
 
-foreach($arrraymulti2 as $name)
-{
+foreach($arrraymulti2 as $name) {
 	echo $name."<br>";
 }
 
-foreach ($arraymulti as $nilai => $value) 
-{
-	foreach ($value as $values => $valud) 
-	{
+foreach ($arraymulti as $nilai => $value) {
+	foreach ($value as $values => $valud) {
 		echo $nilai.' '.$values.' '.$valud."<br>";
 	}
 	echo "<br>";

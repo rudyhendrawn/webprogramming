@@ -5,12 +5,9 @@
 // If-else
 echo "<h3>Struktur if-else</h3>";
 $num = 10;
-if ($num % 2 == 0)
-{
+if ($num % 2 == 0) {
     echo $num, " adalah Bilangan Genap";
-}
-else
-{
+} else {
     echo $num, " adalah Bilangan Ganjil";
 }
 
@@ -18,16 +15,11 @@ echo "<br><br>";
 // Struktur If-else-if
 echo "<h3>Struktur if-else-if</h3>";
 $num = -10;
-if ($num > 0)
-{
+if ($num > 0) {
     echo $num, " adalah Bilangan Positif";
-}
-else if ($num < 0)
-{
+} else if ($num < 0) {
     echo $num, " adalah Bilangan Negatif";
-}
-else
-{
+} else {
     echo "adalah ", $num;
 }
 
@@ -35,8 +27,7 @@ echo "<br><br>";
 // Struktur Switch-case
 echo "<h3>Struktur switch-case</h3>";
 $bulan = 1;
-switch ($bulan)
-{
+switch ($bulan) {
     case 1:
         echo "Bulan ke-", $bulan, " adalah Januari";
         break;

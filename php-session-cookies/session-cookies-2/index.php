@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['viewCount'])) 
-{
+if (!isset($_SESSION['viewCount'])) {
     $_SESSION['viewCount'] = 0;
 }
 ?>

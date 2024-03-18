@@ -1,21 +1,20 @@
 <?php
 // Buat fungsi untuk menghitung nilai rata-rata tugas, uts, dan uas
-function average($tugas, $uts, $uas)
-{
+function average($tugas, $uts, $uas) {
 	$avg = ($tugas + $uts + $uas)/3;
 	return $avg;
 
 }
 
-// Buat fungsi untuk menghitung nilai huruf (A, B, C, D) berdasarkan nilai rata-rata
-// kriteria:
-// 	rata-rata > 90 maka A
-// 	rata-rata > 70 maka B
-// 	rata-rata > 50 maka C
-// 	rata-rata <= 50 maka D
+/*
+Buat fungsi untuk menghitung nilai huruf (A, B, C, D) berdasarkan nilai rata-rata dengan kriteria:
+	1. rata-rata > 90 maka A
+	2. rata-rata > 70 maka B
+	3. rata-rata > 50 maka C
+	4. rata-rata <= 50 maka D
+*/
 
-function score($avrg)
-{
+function score($avrg) {
 	if($avrg > 90)
 		return 'A';
 	elseif($avrg > 70)
@@ -38,19 +37,17 @@ $dataMhs = array
 	'uas' => array(70, 80, 60, 70),
 );
 
-// $index = 0;
-// do{
-// 	foreach ($dataMhs as $key => $value) {
-// 		echo "$key: $value[$index]<br>";
-// 	}
-
-// 	$index++;
-// }
-// while($index < 4);
+$index = 0;
+do {
+	foreach ($dataMhs as $key => $value) {
+		echo "$key: $value[$index]<br>";
+	}
+	$index++;
+}
+while($index < 4);
 
 $index = 0;
-do
-{
+do {
 	$ratarata = average($dataMhs['tugas'][$index], $dataMhs['uts'][$index], $dataMhs['uas'][$index]);
 	$nilai = score($ratarata);
 	echo $dataMhs['Nama'][$index].' '.$ratarata.' '.$nilai.'<br>';

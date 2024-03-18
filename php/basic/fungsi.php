@@ -10,8 +10,7 @@
 */
 
 // 1.1 Fungsi non-return value tanpa argumen
-function perkalian_1()
-{
+function perkalian_1() {
 	$var1 = 10;
 	$var2 = 50;
 	$var3 = $var1 * $var2;
@@ -19,16 +18,14 @@ function perkalian_1()
 }
 
 // 1.2 Fungsi non-return value dengan argumen
-function perkalian_2($arg1, $arg2)
-{
+function perkalian_2($arg1, $arg2) {
 	// Kode fungsi
 	$var = $arg1 * $arg2;
 	echo $var;
 }
 
 // 2.1 Fungsi return value tanpa argumen
-function penjumlahan_1()
-{
+function penjumlahan_1() {
 	$var1 = 10;
 	$var2 = 50;
 	$var3 = $var1 + $var2;
@@ -36,10 +33,7 @@ function penjumlahan_1()
 	return $var3;
 }
 
-
-
-function nilai_huruf($nilai)
-{
+function nilai_huruf($nilai) {
 	// Mekanisme penentuan nilai huruf
 	// ditulis di dalam fungsi ini
 	if($nilai > 90)
@@ -53,8 +47,7 @@ function nilai_huruf($nilai)
 }
 
 // 2.2 Fungsi return value dengan argumen
-function penjumlahan_2($arg1, $arg2)
-{
+function penjumlahan_2($arg1, $arg2) {
 	$var3 = $arg1 - $arg2;
 
 	return $var3;

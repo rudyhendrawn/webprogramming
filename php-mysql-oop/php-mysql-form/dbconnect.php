@@ -9,11 +9,8 @@ $options =
     PDO::ATTR_EMULATE_PREPARES   => false,
 ];
 
-try 
-{
+try {
     $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
-} 
-catch (PDOException $e) 
-{
+} catch (PDOException $e) {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }

@@ -3,8 +3,7 @@ include 'Item.php';
 
 $item = new Item($pdo);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $itemName = $_POST['name'] ?? '';
     if (!empty($itemName)) 
 	{
