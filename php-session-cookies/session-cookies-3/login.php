@@ -5,17 +5,14 @@ require_once 'User.php';
 
 $user = new User($pdo);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-{
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$username = $_POST['username'] ?? '';
 	$password = $_POST['password'] ?? '';
 
-	if (!empty($username) && !empty($password))
-	{
+	if (!empty($username) && !empty($password)) {
 		// Check if the user exists
 		$authenticated_user = $user->authenticate($username, $password);
-		if ($authenticated_user)
-		{
+		if ($authenticated_user) {
 			echo $username . "<br>";
 			echo $password;
 			$_SESSION['loggedin'] = true;
@@ -23,8 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			setcookie('username', $authenticated_user['username'], time() + 3600);
 			header("Location: index.php");
 			exit();
-		}
-		else {
+		} else {
 			// Login failed
 			$error = "Your username/password combination was incorrect";
 		}

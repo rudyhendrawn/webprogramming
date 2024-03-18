@@ -2,12 +2,10 @@
 session_start();
 
 // Example of setting a session variable
-if (!isset($_SESSION['visit_count'])) 
-{
+if (!isset($_SESSION['visit_count'])) {
     $_SESSION['visit_count'] = 1;
 } 
-else 
-{
+else {
     $_SESSION['visit_count']++;
 }
 
@@ -17,12 +15,10 @@ $cookie_value = "Wayan Kaler";
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 
 // Accessing a cookie
-if(isset($_COOKIE[$cookie_name])) 
-{
+if(isset($_COOKIE[$cookie_name])) {
     echo "Welcome " . $_COOKIE[$cookie_name];
 } 
-else 
-{
+else {
     echo "Welcome Guest!";
 }
 

@@ -10,8 +10,7 @@ $dataMhs = array
 
 // Tampilkan semua data berdasarkan nama, nim, dan kota
 $index = 0;
-do
-{
+do {
 	foreach ($dataMhs as $key => $value) 
 	{
 		echo "$key: $value[$index]<br>";
