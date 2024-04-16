@@ -26,8 +26,13 @@ class Item {
 
     // Add methods for update and delete as needed
     public function updateItem($id, $name) {
-        $stmt = $this->pdo->prepare("UPDATE items SET name = :name WHERE id = :id");
-        $stmt->execute(['id' => $id, 'name' => $name]);
+        try {
+            $stmt = $this->pdo->prepare("UPDATE items SET name = :name WHERE id = :id");
+            $stmt->execute(['id' => $id, 'name' => $name]);
+        }
+        catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
     }
 
     public function deleteItem($id) {
