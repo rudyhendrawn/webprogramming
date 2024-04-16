@@ -13,7 +13,34 @@
 </form>
 
 <?php include_once 'add_item.php'; ?>
-<?php include_once 'view_items.php'; ?>
+
+<h2>Item List</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Action</th>
+    </tr>
+    <?php 
+    include_once 'view_items.php'; 
+    $items = view_items($pdo);
+    foreach ($items as $item) {
+        echo "<tr>";
+        echo "<td>" . $item['id'] . "</td>";
+        echo "<td>" . $item['name'] . "</td>";
+        echo "<td>";
+        // echo "Edit | Delete";
+        // echo "<div style='display: inline;'>";
+        echo "<a href='update_item.php?id=" . $item['id'] . "'>Update</a>";
+        echo "<a href='delete_item.php?id=" . $item['id'] . "'>Delete</a>";
+        echo "</div>";
+        echo "</td>";
+        echo "</tr>";
+    }
+    ?>
+</table>
+
+
 
 </body>
 </html>
