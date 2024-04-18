@@ -1,7 +1,7 @@
 <?php
 include 'dbconnect.php';
 
-class FormHandler {
+class UserHandler {
     private $name;
     private $email;
     private $pdo;
@@ -12,12 +12,12 @@ class FormHandler {
         $this->email = htmlspecialchars($email);
     }
 
-    public function saveData() {
+    public function insertUser() {
         $stmt = $this->pdo->prepare("INSERT INTO users (name, email) VALUES (:name, :email)");
         $stmt->execute(['name' => $this->name, 'email' => $this->email]);
     }
 
-    public function displayData() {
+    public function viewUser() {
         echo "Name: " . $this->name . "<br>";
         echo "Email: " . $this->email . "<br>";
     }

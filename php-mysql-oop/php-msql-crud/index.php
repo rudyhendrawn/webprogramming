@@ -30,9 +30,11 @@ $items = $item->getAllItems();
 
 <h2>Items List</h2>
 <ul>
-    <?php foreach ($items as $item): ?>
-        <li><?php echo htmlspecialchars($item['name']); ?></li>
-    <?php endforeach; ?>
+    <?php 
+    foreach ($items as $item): 
+        echo '<li>' . $item['name'] . '</li>';
+    endforeach;
+    ?>
 </ul>
 
 </body>
