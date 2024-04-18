@@ -1,5 +1,5 @@
 <?php
-include 'FormHandler.php';
+include 'UserHandler.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $formHandler = new UserHandler($pdo, $_POST['name'], $_POST['email']);
